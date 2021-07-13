@@ -11,12 +11,12 @@
 	<br />
     <a href="https://github.com/xrenegade100/TeraWare/issues">Report Bug</a>
     ·
-    <a href="https://github.com/xrenegade100/TeraWare/pull">Pull Request</a>
+    <a href="https://github.com/xrenegade100/TeraWare/pulls">Pull Request</a>
 	<br />
 	<br />
     <img alt="GitHub issues" src="https://img.shields.io/github/issues/xrenegade100/TeraWare">
     <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/xrenegade100/TeraWare">
-    <img alt="GitHub" src="https://img.shields.io/github/license/xrenegade100/TeraWare">
+    <img alt="GitHub" src="https://img.shields.io/github/license/xrenegade100/TeraWare?1">
   </p>
 </p>
 
