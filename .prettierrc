@@ -1,0 +1,39 @@
+{
+	"overrides": [
+		{
+			"files": "*.java",
+			"options": {
+				"semi": true,
+				"tabWidth": 4,
+				"useTabs": true,
+				"printWidth": 100,
+				"trailingComma": "none"
+			}
+		},
+		{
+			"files": "*.js",
+			"options": {
+				"semi": true,
+				"tabWidth": 4,
+				"useTabs": true,
+				"singleQuote": true
+			}
+		},
+		{
+			"files": "*.json",
+			"options": {
+				"tabWidth": 4,
+				"useTabs": true
+			}
+		},
+		{
+			"files": ".prettierrc",
+			"options": {
+				"semi": true,
+				"tabWidth": 4,
+				"useTabs": true,
+				"singleQuote": true
+			}
+		}
+	]
+}

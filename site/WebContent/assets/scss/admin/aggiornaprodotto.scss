@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+input {
+  padding: 10px;
+  font-family: "Quicksand";
+}
+
+textarea {
+  margin: 10px;
+  padding: 10px;
+  font-family: "Quicksand";
+  resize: none;
+}
+
+.img-choice-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  border-top: 2px solid #333;
+}
+
+.two-row-input {
+  display: flex;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+}
+
+label {
+  font-family: "Quicksand";
+}
+
+#product-img {
+  max-width: 300px;
+  max-height: 225px;
+}

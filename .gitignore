@@ -1,0 +1,6 @@
+site/WebContent/assets/css/
+site/build/
+site/.classpath
+site/WebContent/WEB-INF/secrets.json
+site/.settings
+site/WebContent/assets/dist

@@ -1,0 +1,94 @@
+/*Main Colors*/
+$accent: #ebc015;
+$hover: #ffdb4d;
+$gray-almost-black: #282828;
+
+/*Gray Scale*/
+$white: #ffffff;
+$gray-100: #ececec;
+$gray-200: #dcdcdc;
+$gray-300: #9e9e9e;
+$gray-400: #757575;
+$gray-500: #616161;
+$gray-600: #696969;
+$gray-700: #494949;
+$gray-800: #313131;
+$gray-900: #1d1d1d;
+
+/*Cards*/
+@mixin base-card-roules($width, $height, $bg-color) {
+  width: $width;
+  height: $height;
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  background-color: $bg-color;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-out;
+}
+
+@mixin base-card-hover-roules {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.3s ease-out;
+}
+
+/*Radius*/
+$border-radius: 0.3125rem;
+
+/*Support Card*/
+.support-card-container {
+  @include base-card-roules(18.75rem, 18.75rem, $white);
+  text-align: center;
+  position: relative;
+  transition: width 0.3s ease-in, height 0.3s ease-in;
+
+  &:hover {
+    @include base-card-hover-roules();
+    cursor: pointer;
+    &::before {
+      width: 70%;
+      height: 70%;
+    }
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    z-index: 0;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    height: 50%;
+    width: 50%;
+    border: 3px solid $accent;
+    border-radius: 100%;
+    transition: width 0.3s ease-out, height 0.3s ease-out;
+  }
+
+  .support-image-container {
+    background-color: $accent;
+    border-radius: 100%;
+    margin: 20% 20% 0 20%;
+    width: 60%;
+    height: 60%;
+  }
+
+  .support-frame {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: none;
+  }
+
+  .put-down {
+    margin-top: 6%;
+  }
+  /*Lottie Player Code*/
+  //<lottie-player class="support-frame" src="img/support-animations/privacy-policy.json"  background="transparent"  speed="1" loop autoplay></lottie-player>
+  /*Lottie Script*/
+  //<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+}

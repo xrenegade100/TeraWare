@@ -1,0 +1,329 @@
+/*Main Colors*/
+$accent: #ebc015;
+$hover: #ffdb4d;
+$gray-almost-black: #282828;
+
+/*Gray Scale*/
+$white: #ffffff;
+$gray-100: #ececec;
+$gray-200: #dcdcdc;
+$gray-300: #9e9e9e;
+$gray-400: #757575;
+$gray-500: #616161;
+$gray-600: #696969;
+$gray-700: #494949;
+$gray-800: #313131;
+$gray-900: #1d1d1d;
+
+/*Radius*/
+$border-radius: 0.3125rem;
+
+/*Carousel*/
+.carousel-container {
+  width: 100%;
+  height: 100vh;
+  border: 0%;
+  margin: 0%;
+  padding: 0%;
+  background-color: $gray-800;
+
+  .carousel {
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+    border: 0%;
+    overflow: hidden;
+    position: relative;
+
+    .carousel-item,
+    .carousel-item--hidden {
+      display: none;
+
+      .carousel-image {
+        width: 100%;
+        height: 100%;
+        max-width: 100vw;
+        object-fit: cover;
+      }
+
+      .carousel-text-container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        bottom: 0%;
+        padding: 5% 0 5% 0;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 242, 84, 0) 0%,
+          rgba(0, 0, 0, 1) 100%
+        );
+
+        .title {
+          color: $white;
+          text-align: center;
+        }
+
+        .subtitle {
+          color: #9e9e9e;
+        }
+      }
+    }
+
+    .carousel-item--visible {
+      display: block;
+      animation: carousel-show-animation 1.5s;
+    }
+
+    @keyframes carousel-show-animation {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1 linear;
+      }
+    }
+
+    @keyframes carousel-hide-animation {
+      0% {
+        opacity: 1 linear;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.carousel-actions {
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+
+  .carousel-button {
+    border: 0px transparent;
+    color: $accent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+    width: 5rem;
+    background-color: transparent;
+
+    &:hover {
+      cursor: pointer;
+      animation: button-animation 0.5s;
+    }
+  }
+
+  @keyframes button-animation {
+    0% {
+      margin: 1%;
+    }
+
+    50% {
+      margin: 0%;
+    }
+
+    100% {
+      margin: 1%;
+    }
+  }
+}
+
+/*Sections*/
+
+.title {
+  text-align: center;
+  color: $accent;
+  margin: 1%;
+}
+
+.subtitle {
+  color: $gray-almost-black;
+  text-align: center;
+}
+
+.shop-link {
+  position: relative;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.875rem;
+  color: $gray-almost-black;
+  margin-top: 5%;
+  padding: 0px;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    height: 0.25rem;
+    width: 0%;
+    border-radius: 0.3rem;
+    background-color: $gray-900;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+      left: 0%;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+.shop-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 0%;
+  padding: 0%;
+
+  .pointers {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 10%;
+    margin: 2% 0 2% 0;
+
+    .pointer {
+      width: 0.9rem;
+      height: 0.9rem;
+      border-radius: 100%;
+      background-color: $gray-300;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .active {
+      background-color: $accent;
+    }
+  }
+
+  .products-carousel {
+    position: relative;
+    width: 100% !important;
+    height: auto;
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+
+    .products-carousel-item {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 0%;
+      height: auto;
+      margin: 0%;
+      padding: 0%;
+      left: 0px;
+    }
+
+    @media only screen and (max-width: 720px) {
+      .products-carousel-item {
+        flex-direction: column;
+      }
+
+      .break {
+        flex-basis: 0%;
+        width: 0px;
+      }
+    }
+
+    .products-carousel-item--hidden {
+      float: right;
+      animation: exit-anim 1s ease-out;
+      width: 0px;
+      right: 0px;
+    }
+
+    .products-carousel-item--visible {
+      width: 100%;
+      left: 0%;
+      animation: enter-anim 2s ease-in-out;
+      float: left;
+    }
+
+    @keyframes exit-anim {
+      0% {
+        width: 100%;
+      }
+
+      100% {
+        width: 0%;
+      }
+    }
+
+    @keyframes enter-anim {
+      0% {
+        width: 0%;
+      }
+
+      100% {
+        width: 100%;
+      }
+    }
+  }
+
+  .products-arrow {
+    color: $gray-400;
+  }
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 5% 0 5% 0;
+  padding: 0%;
+}
+
+@media only screen and (max-width: 1280px) {
+  .break {
+    flex-basis: 100%;
+    width: 100%;
+  }
+}
+
+.parallax {
+  background-image: url("https://wallpaper.dog/large/574728.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.quote-container {
+  position: relative;
+  width: 96%;
+  padding: 10% 2% 10% 2%;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  background: linear-gradient(
+    315deg,
+    rgba(255, 219, 77, 1) 25%,
+    rgba(235, 192, 21, 1) 100%
+  );
+  text-align: center;
+}

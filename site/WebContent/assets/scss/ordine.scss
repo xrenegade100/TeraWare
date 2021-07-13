@@ -1,0 +1,91 @@
+/*Main Colors*/
+$accent: #ebc015;
+$hover: #ffdb4d;
+$gray-almost-black: #282828;
+
+/*Gray Scale*/
+$white: #ffffff;
+$gray-100: #ececec;
+$gray-200: #dcdcdc;
+$gray-300: #9e9e9e;
+$gray-400: #757575;
+$gray-500: #616161;
+$gray-600: #696969;
+$gray-700: #494949;
+$gray-800: #313131;
+$gray-900: #1d1d1d;
+
+html,
+body {
+  height: 100%;
+}
+
+.parent-main {
+  margin-top: 55px;
+  display: flex;
+  justify-content: center;
+}
+
+.prodotti {
+  border: 2px solid $gray-almost-black;
+}
+
+.sezione-destra {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pagamento {
+  border: 2px solid $gray-almost-black;
+}
+
+.info {
+  border: 2px solid $gray-almost-black;
+}
+
+.section-prodotti-header {
+  color: $gray-almost-black;
+  background-color: $accent;
+}
+
+.prodotti-table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.prodotti-table thead tr {
+  background-color: $accent;
+  border-top: 2px solid $gray-900;
+}
+
+.prodotti-table thead tr td {
+  padding: 10px;
+}
+
+.prodotti-table tbody tr td {
+  padding: 10px;
+}
+
+.prodotti-table tbody tr:nth-child(even) {
+  background-color: $hover;
+}
+
+.prodotti-table tbody tr:hover {
+  transition: 0.3s;
+  background-color: $gray-100;
+}
+
+.prodotti-table tbody tr a:link,
+.prodotti-table tbody tr a:visited {
+  font-family: "Quicksand";
+  color: $gray-almost-black;
+}
+
+@media only screen and (max-width: 650px) {
+  .parent-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,7 @@
+site/.settings/
+site/.vscode/
+site/bin/
+site/WebContent/assets/dist/
+site/WebContent/assets/css/
+site/WebContent/assets/img/
+site/WebContent/WEB-INF/

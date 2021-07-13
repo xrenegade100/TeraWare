@@ -1,0 +1,30 @@
+h3.error {
+  text-align: center;
+}
+
+.butt {
+  font-family: "Quicksand";
+  background-color: #ebc015;
+  align-content: center;
+  padding: 14px 40px;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  text-align: center;
+}
+
+.butt:hover {
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  background-color: #ffdb4d;
+  cursor: pointer;
+}
+
+.react {
+  margin: 0 auto;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

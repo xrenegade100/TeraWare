@@ -1,0 +1,74 @@
+$hover: #ffdb4d;
+
+.👻 {
+  display: none;
+}
+
+.🧱 {
+  display: block;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+.action-button {
+  display: flex;
+  margin: 0 5px;
+  height: 100%;
+  padding: 15px 25px;
+  background: #ebc015;
+  font-family: "Quicksand";
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: #1d1d1d;
+}
+
+.icon {
+  font-size: 48px !important;
+}
+
+form {
+  padding: 5px;
+  border: 2px solid #ebc015;
+  margin: 25px;
+  transition: 0.5s;
+}
+
+.text-input {
+  outline: none;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #dcdcdc;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  transition: all 0.3s ease-in-out;
+  font-family: "Montserrat";
+}
+.text-input:focus {
+  transition: all 0.3s ease-in-out;
+  border-bottom: 2px solid $hover;
+}
+
+input[type="submit"] {
+  background: #dcdcdc;
+  padding: 10px;
+  background-color: #ebc015;
+  font-family: "Montserrat";
+  font-weight: 500;
+  outline: none;
+}
