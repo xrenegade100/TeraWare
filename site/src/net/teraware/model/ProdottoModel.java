@@ -164,6 +164,26 @@ public class ProdottoModel implements IModel<ProdottoBean> {
 
 		return prodotti;
 	}
+	
+	/**
+	 * Ottieni i prodotti in ordine decrescente in base alle quantita' di vendita.
+	 * */
+	public ArrayList<ProdottoBean> doRetrieveMostSold(int skip, int limit)
+			throws SQLException {
+			Connection con = DatabaseManager.getInstance().getConnection();
+			String query =
+				"SELECT prodotto.*, SUM(prodotto_ordine.quantita) as p_quantita FROM prodotto_ordine RIGHT JOIN prodotto ON id_prodotto = prodotto.id GROUP BY prodotto.id ORDER BY p_quantita DESC LIMIT ?,?";
+
+			PreparedStatement ps = con.prepareStatement(query);
+			ps.setInt(1, skip);
+			ps.setInt(2, limit);
+			ResultSet rs = ps.executeQuery();
+
+			DatabaseManager.getInstance().releaseConnection(con);
+			ArrayList<ProdottoBean> prodotti = convertResultSet(rs);
+
+			return prodotti;
+		}
 
 	@Override
 	public Collection<ProdottoBean> doRetrieveAll(String order) throws SQLException {

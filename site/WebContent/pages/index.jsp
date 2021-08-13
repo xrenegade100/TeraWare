@@ -22,7 +22,6 @@
             <h1 class="title">GTX, Tutta la potenza di Nvidia</h1>
           </div>
         </div>
-
         <div class="carousel-item">
           <img src="<%= getServletContext().getContextPath() + "/assets/img/index/carousel/bitcoin.jpg" %>" alt="" class="carousel-image">
           <div class="carousel-text-container">
@@ -64,11 +63,10 @@
             <div class="pointer"></div>
         </div>
         <div class="products-carousel">
-        
-          <% ArrayList<ProdottoBean> prodotti = (ArrayList<ProdottoBean>) new ProdottoModel().doRetrieveAll(null); %>
+          <% ArrayList<ProdottoBean> prodotti = (ArrayList<ProdottoBean>) new ProdottoModel().doRetrieveMostSold(0, 3); %>
           
           <div class="products-carousel-item products-carousel-item--visible">
-          <% for (int i = 0; i < 3; i++) { 
+          <% for (int i = 0; i < prodotti.size(); i++) { 
           		ProdottoBean prodotto = prodotti.get(i);
           		String categoria = new ProdottoModel().getCategoriaProdotto(prodotto);
           %>
@@ -105,7 +103,9 @@
 			<% } %>  
           </div>
           <div class="products-carousel-item">
-          <% for (int i = 3; i < 6; i++) {
+          <%
+          	prodotti = (ArrayList<ProdottoBean>) new ProdottoModel().doRetrieveMostSold(3, 3);
+          	for (int i = 0; i < prodotti.size(); i++) {
         	  ProdottoBean prodotto = prodotti.get(i);
         		String categoria = new ProdottoModel().getCategoriaProdotto(prodotto);
         	  %>
@@ -142,7 +142,9 @@
 			<% } %>
           </div>
           <div class="products-carousel-item">
-           <% for (int i = 6; i < 11; i+=2) {
+           <% 
+           prodotti = (ArrayList<ProdottoBean>) new ProdottoModel().doRetrieveMostSold(6, 3);
+           for (int i = 0; i < prodotti.size(); i++) {
         	  ProdottoBean prodotto = prodotti.get(i);
         		String categoria = new ProdottoModel().getCategoriaProdotto(prodotto);
         	  %>

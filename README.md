@@ -53,6 +53,7 @@ Per far partire il sito sul tuo computer assicurati di installare tutti i softwa
 - MySQL
 - Eclipse for Java EE
 - Tomcat
+- NodeJS (opzionale)
 
 ### Esecuzione
 
@@ -74,6 +75,19 @@ $ git clone https://github.com/xrenegade100/TeraWare
    5. Ripeti i passaggi iii. e iv. scegliendo `Server Runtime` e aggiungi un server Tomcat
    6. Sulla sinistra clicca `Add External JARs` e naviga in `/TeraWare/site/WebContent/WEB-INF/lib/`, seleziona tutti i file JAR e aggiungili.
 4. Compila i file Sass (è preferibile tramite Visual Studio Code con [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass), aprendo la cartella `site` che si trova nella root della repo e poi cliccando su `Watch Sass`) ![Tutorial](https://github.com/ritwickdey/vscode-live-sass-compiler/raw/master/images/Screenshot/statusbar.jpg)
+   _In alternativa_ da un terminale:
+   ```bash
+   $ npm i
+   $ npm run scss:build
+   ```
+   Nota che i comandi precedenti compilano i file scss e generano i file css in versione compressa. Per generare anche i file css non compressi usa:
+   ```bash
+   $ npm run scss:build -- -u
+   ```
+   Per cancellare tutti i file css generati usa:
+   ```bash
+   $ npm run scss:clean
+   ```
 5. In Eclipse naviga in `WebContent` > `install`, clicca con il tasto destro su `install.jsp` > `Run As` > `Run On Server` e segui i passaggi per l'installazione del sito.
 
 ## Per contribuire
