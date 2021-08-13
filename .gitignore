@@ -4,3 +4,4 @@ site/.classpath
 site/WebContent/WEB-INF/secrets.json
 site/.settings
 site/WebContent/assets/dist
+node_modules/

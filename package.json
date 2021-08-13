@@ -1,0 +1,30 @@
+{
+	"name": "teraware",
+	"version": "1.0.0",
+	"description": "[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)\r <br />",
+	"main": "index.js",
+	"directories": {
+		"doc": "doc"
+	},
+	"scripts": {
+		"scss:compile": "node scripts/compile-sass.js",
+		"scss:clean": "node scripts/compile-sass.js -c"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/xrenegade100/TeraWare.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/xrenegade100/TeraWare/issues"
+	},
+	"homepage": "https://github.com/xrenegade100/TeraWare#readme",
+	"devDependencies": {
+		"sass": "^1.37.5"
+	},
+	"dependencies": {
+		"commander": "^8.1.0"
+	}
+}
